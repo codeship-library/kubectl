@@ -18,8 +18,10 @@ Check out the [codeship/env-var-helper README](https://github.com/codeship-libra
 
 ## Encrypt the file, remove files and/or add to `.gitignore`
 
+```shell
 jet encrypt k8s-env k8s-env.encrypted
 rm kubeconfigdata k8s-env
+```
 
 ## Configure the service and steps into the build with the following as guidance
 
