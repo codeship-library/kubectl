@@ -1,0 +1,10 @@
+- name: check response to kubectl config
+  command: kubectl config view
+  service: kubectl
+
+- name: push codeship/kubectl
+  tag: master
+  type: push
+  service: kubectl
+  image_name: codeship/kubectl
+  encrypted_dockercfg_path: dockercfg.encrypted

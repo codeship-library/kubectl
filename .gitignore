@@ -1,0 +1,6 @@
+dockercfg
+codeship.aes
+kubeconfigdata
+env
+test-env
+k8s-env
