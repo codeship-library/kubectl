@@ -3,3 +3,9 @@ kubectl:
     image: codeship/kubectl
     dockerfile: Dockerfile
   encrypted_env_file: k8s-env.encrypted
+
+eks-kubectl:
+  build:
+    image: codeship/eks-kubectl
+    dockerfile: Dockerfile.eks
+  encrypted_env_file: k8s-env.encrypted
