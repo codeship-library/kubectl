@@ -2,9 +2,24 @@
   command: kubectl config view
   service: kubectl
 
+- name: check response to kubectl configi for eks
+  command: kubectl config view
+  service: eks-kubectl
+
+- name: check response to aws-iam-authenticator
+  command: aws-iam-authenticator
+  service: eks-kubectl
+
 - name: push codeship/kubectl
   tag: master
   type: push
   service: kubectl
   image_name: codeship/kubectl
+  encrypted_dockercfg_path: dockercfg.encrypted
+
+- name: push codeship/eks-kubectl
+  tag: master
+  type: push
+  service: eks-kubectl
+  image_name: codeship/eks-kubectl
   encrypted_dockercfg_path: dockercfg.encrypted

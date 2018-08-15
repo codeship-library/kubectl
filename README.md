@@ -42,3 +42,6 @@ kubectl:
   service: kubectl
   command: kubectl config view
 ```
+
+## Deploying to EKS?
+The same workflow outline above works with EKS, but use the `codeship/eks-kubectl` image, which comes installed with `aws-iam-authenticator` and an AWS-vendored copy of `kubectl`.
